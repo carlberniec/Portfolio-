@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Carl Bernie Capobres</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background: #f8f9fa; /* Light Gray */
+            color: #0a192f; /* Navy Blue Text */
+        }
+
+        /* ===== NAVIGATION ===== */
+        .top-nav {
+            background: #0a192f; /* Navy Blue Navbar */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #f8f9fa; /* Light Text */
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover {
+            color: #e63946; /* Red Hover */
+            border-bottom-color: #e63946;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .nav-menu a.active {
+            color: #e63946;
+            border-bottom-color: #e63946;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #0a192f;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #e63946;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* ===== CONTACT CARDS ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #0a192f;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-left-color: #e63946;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #e63946; /* Red Icon */
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+            color: #0a192f;
+        }
+
+        .contact-card p {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            color: #e63946;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #0a192f;
+            margin-top: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form:hover {
+            border-left-color: #e63946;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #0a192f;
+            border-bottom: 2px solid #e63946;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #0a192f;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e63946;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #e63946;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #c92f3d;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+
+            .nav-menu a {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Get In Touch</h1>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>Send me an email for inquiries or collaboration</p>
+                <a href="mailto:carlbernie.capobres@sorsu.edu.ph" class="contact-link">carlbernie.capobres@sorsu.edu.ph</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <p>Call or text me for urgent matters</p>
+                <a href="tel:+639100493655" class="contact-link">+639100493655</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Location</h3>
+                <p>Based in Bulan Sorsogon, Philippines</p>
+                <span class="contact-link">Bulan Sorsogon, Philippines</span>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>Connect with me professionally</p>
+                <a href="https://linkedin.com/in/carlberniecapobres" class="contact-link" target="_blank">View Profile</a>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <h2>Send Me a Message</h2>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

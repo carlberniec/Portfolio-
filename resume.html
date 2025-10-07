@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Carl Bernie Capobres</title>
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa; /* Light Gray */
+      color: #333;
+    }
+
+    /* ===== Profile Section ===== */
+    .profile-section {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .profile-image {
+      flex: 0 0 200px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #0a192f; /* Navy border */
+    }
+
+    .profile-info {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .profile-info h2 {
+      margin-top: 0;
+      color: #0a192f; /* Navy Blue */
+      font-size: 2em;
+    }
+
+    .info-item {
+      margin: 12px 0;
+      font-size: 1.05em;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #555;
+      display: inline-block;
+      width: 100px;
+    }
+
+    .description {
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #eef1f4;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 4px solid #e63946; /* Red accent */
+    }
+
+    /* ===== Navigation ===== */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: #0a192f; /* Navy Blue */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 100;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .nav-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    .nav-menu li {
+      margin: 0;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 15px 25px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-menu a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-bottom-color: #e63946; /* Red accent */
+    }
+
+    .nav-menu a.active {
+      color: #e63946;
+      border-bottom-color: #e63946;
+    }
+
+    /* ===== Content Sections ===== */
+    .content-section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section h2 {
+      color: #0a192f; /* Navy Blue */
+      border-left: 6px solid #e63946; /* Red accent */
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .resume-item {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      border-left: 4px solid #0a192f; /* Navy Blue */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .resume-item h3 {
+      margin: 0 0 10px 0;
+      color: #0a192f;
+    }
+
+    .resume-item p {
+      margin: 5px 0;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* ===== Skills Grid ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-category {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #e63946; /* Red accent */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .skill-category ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-category li {
+      padding: 8px 0;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    .skill-category strong {
+      color: #0a192f;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-image {
+        flex: none;
+        align-self: center;
+      }
+
+      .nav-menu {
+        flex-wrap: wrap;
+      }
+
+      .nav-menu a {
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="profile-section">
+    <div class="profile-image">
+      <img src="carlbernie.jpg" alt="Carl Bernie Capobres">
+    </div>
+
+    <div class="profile-info">
+      <h2>Carl Bernie Capobres</h2>
+
+      <div class="info-item">
+        <span class="info-label">Age:</span>
+        <span>23</span>
+      </div>
+
+      <div class="info-item">
+        <span class="info-label">Address:</span>
+        <span>Sorsogon City, Philippines</span>
+      </div>
+
+      <div class="info-item">
+        <span class="info-label">Course:</span>
+        <span>Bachelor of Science in Information System</span>
+      </div>
+
+      <div class="description">
+        <strong>Description:</strong><br>
+        A dedicated Information System student with a solid understanding of information technology, systems analysis, and business process management. Skilled in integrating technology solutions to enhance organizational performance and decision-making. Eager to apply academic knowledge and technical skills in real-world projects and professional environments.
+      </div>
+    </div>
+  </section>
+
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="content-section">
+    <h2>Education</h2>
+    <div class="resume-item">
+      <h3>Bachelor of Science in Information System</h3>
+      <p>Sorsogon State University – Bulan Campus | 2022 - Present</p>
+
+      <h3>Beguin National High School</h3>
+      <p>Senior High School (GAS Strand) | 2020 - 2022</p>
+      <p>Junior High School | 2016 - 2020</p>
+
+      <h3>Lajong Elementary School</h3>
+      <p>2010 - 2016</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <ul>
+          <li><strong>Photo Editing:</strong> Skilled in enhancing and retouching photos, adjusting lighting, and applying creative effects to produce professional and visually engaging outputs.</li>
+          <li><strong>Project Planning and Management:</strong> Skilled in defining project scope, timelines, and deliverables to ensure successful completion.</li>
+          <li><strong>Systems Analysis and Design:</strong> Proficient in analyzing business requirements and designing effective information system solutions.</li>
+          <li><strong>Team Leadership and Collaboration:</strong> Experienced in leading team members, assigning tasks, and fostering effective communication throughout the project.</li>
+          <li><strong>Documentation and Presentation:</strong> Capable of preparing detailed reports, technical documentation, and presenting project outcomes to stakeholders.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Experience</h2>
+    <div class="resume-item">
+      <h3>Project Manager</h3>
+      <p><strong>Capstone Project</strong> | 2022 - Present</p>
+      <p>Led the planning, coordination, and execution of the capstone project, ensuring timely completion of tasks, effective team collaboration, and successful achievement of project goals.</p>
+
+      <h3>Civic Welfare Training Service (CWTS)</h3>
+      <p><strong>School Program</strong> | 2022 - 2023</p>
+      <p>Participated in community service activities focused on promoting social awareness, environmental protection, and civic responsibility, contributing to the betterment of local communities through teamwork and volunteerism.</p>
+    </div>
+  </section>
+</body>
+</html>
